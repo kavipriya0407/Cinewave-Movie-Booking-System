@@ -1,0 +1,203 @@
+/* Digital Cinema Ticket Styling */
+
+.ticket-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.cinema-ticket {
+  width: 100%;
+  max-width: 760px;
+  background: linear-gradient(135deg, #131a2b 0%, #0d121f 100%);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  border-radius: var(--radius-xl);
+  display: grid;
+  grid-template-columns: 1fr 260px;
+  position: relative;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 30px rgba(245, 158, 11, 0.15);
+  overflow: hidden;
+}
+
+/* Semi-circular Cutouts for Perforation */
+.ticket-main {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.ticket-stub {
+  background: #0d121f;
+  border-left: 2px dashed rgba(255, 255, 255, 0.15);
+  padding: 2.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  position: relative;
+}
+
+/* Notches */
+.ticket-notch {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: var(--bg-main);
+  border-radius: var(--radius-full);
+  z-index: 5;
+}
+
+.ticket-notch.top {
+  top: -12px;
+  right: 248px;
+  border-bottom: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.ticket-notch.bottom {
+  bottom: -12px;
+  right: 248px;
+  border-top: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.ticket-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  margin-bottom: 1.5rem;
+}
+
+.ticket-movie-title {
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: var(--text-light);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.ticket-movie-format {
+  display: inline-block;
+  background: rgba(245, 158, 11, 0.15);
+  color: var(--accent-gold);
+  border: 1px solid rgba(245, 158, 11, 0.3);
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  margin-bottom: 1.5rem;
+}
+
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.ticket-data-label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+}
+
+.ticket-data-val {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-top: 0.2rem;
+}
+
+.ticket-seats-highlight {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  font-weight: 800;
+}
+
+.ticket-qr-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin: auto 0;
+}
+
+.ticket-qr-box {
+  background: #fff;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.ticket-qr-box svg {
+  display: block;
+}
+
+.ticket-code {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  letter-spacing: 0.1em;
+}
+
+.ticket-admit-text {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .ticket-wrapper, .ticket-wrapper * {
+    visibility: visible;
+  }
+  .ticket-wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .cinema-ticket {
+    border: 1px solid #333;
+    box-shadow: none;
+    color: #000;
+    background: #fff !important;
+  }
+  .ticket-main, .ticket-stub {
+    color: #000 !important;
+    background: #fff !important;
+  }
+  .ticket-movie-title, .ticket-data-val, .ticket-brand {
+    color: #000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .cinema-ticket {
+    grid-template-columns: 1fr;
+  }
+  .ticket-stub {
+    border-left: none;
+    border-top: 2px dashed rgba(255, 255, 255, 0.15);
+    padding: 2rem;
+  }
+  .ticket-notch.top, .ticket-notch.bottom {
+    display: none;
+  }
+}

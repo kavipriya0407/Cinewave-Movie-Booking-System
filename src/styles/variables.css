@@ -1,0 +1,84 @@
+/* CineWave Design Tokens & Theme Variables */
+:root {
+  /* Color Palette - Dark Cinema Theme */
+  --bg-main: #0a0d14;
+  --bg-surface: #111726;
+  --bg-card: rgba(18, 24, 40, 0.75);
+  --bg-card-hover: rgba(26, 35, 58, 0.85);
+  --bg-glass: rgba(255, 255, 255, 0.04);
+  --bg-glass-strong: rgba(255, 255, 255, 0.08);
+  --border-glass: rgba(255, 255, 255, 0.08);
+  --border-glass-hover: rgba(245, 158, 11, 0.3);
+
+  /* Cinema Accents */
+  --accent-gold: #f59e0b;
+  --accent-gold-hover: #d97706;
+  --accent-gold-glow: rgba(245, 158, 11, 0.25);
+  --accent-red: #e11d48;
+  --accent-red-hover: #be123c;
+  --accent-red-glow: rgba(225, 29, 72, 0.25);
+  --accent-indigo: #6366f1;
+  --accent-cyan: #06b6d4;
+  --accent-emerald: #10b981;
+  --accent-amber: #f59e0b;
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --text-light: #ffffff;
+
+  /* Lifecycle Status Colors */
+  --status-requested-bg: rgba(99, 102, 241, 0.15);
+  --status-requested-border: #6366f1;
+  --status-requested-text: #a5b4fc;
+
+  --status-review-bg: rgba(245, 158, 11, 0.15);
+  --status-review-border: #f59e0b;
+  --status-review-text: #fcd34d;
+
+  --status-awaiting-bg: rgba(168, 85, 247, 0.15);
+  --status-awaiting-border: #a855f7;
+  --status-awaiting-text: #d8b4fe;
+
+  --status-cust-confirmed-bg: rgba(14, 165, 233, 0.15);
+  --status-cust-confirmed-border: #0ea5e9;
+  --status-cust-confirmed-text: #7dd3fc;
+
+  --status-confirmed-bg: rgba(16, 185, 129, 0.15);
+  --status-confirmed-border: #10b981;
+  --status-confirmed-text: #6ee7b7;
+
+  --status-ticket-bg: rgba(20, 184, 166, 0.2);
+  --status-ticket-border: #14b8a6;
+  --status-ticket-text: #5eead4;
+
+  --status-rejected-bg: rgba(239, 68, 68, 0.15);
+  --status-rejected-border: #ef4444;
+  --status-rejected-text: #fca5a5;
+
+  --status-cancelled-bg: rgba(100, 116, 139, 0.15);
+  --status-cancelled-border: #64748b;
+  --status-cancelled-text: #cbd5e1;
+
+  /* Typography */
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Layout & Spacing */
+  --nav-height: 72px;
+  --sidebar-width: 260px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.6);
+  --shadow-glow-gold: 0 0 24px rgba(245, 158, 11, 0.2);
+  --shadow-glow-red: 0 0 24px rgba(225, 29, 72, 0.2);
+}
